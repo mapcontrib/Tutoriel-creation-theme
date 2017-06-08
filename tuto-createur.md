@@ -279,7 +279,9 @@ Cela se traduit donc pour le contributeur en un noeud "pré-rempli" :
 ![Ajouter un noeud - Partie 1](images/MapContrib_081.png)
 
 ![Ajouter un noeud - Partie 2](images/MapContrib_078.png)
+
 ![Ajouter un noeud - Partie 3](images/MapContrib_079.png)
+
 ![Ajouter un noeud - Partie 3](images/MapContrib_080.png)
 
 
@@ -291,8 +293,13 @@ Si vous avez écrit en français sauf les tags, il n'est pas nécessaire de remp
 Ces traductions seront nécessaires pour que cela fonctionne dans d'autres langues.
 
 ![Traduction - Partie 1](images/MapContrib_043.png)
+
 ![Traduction - Partie 2](images/MapContrib_044.png)
+
 ![Traduction - Partie 3](images/MapContrib_045.png)
+
 ![Traduction - Partie 4](images/MapContrib_046.png)
+
 ![Traduction - Partie 5](images/MapContrib_047.png)
+
 ![Traduction - Partie 5](images/MapContrib_049.png)
