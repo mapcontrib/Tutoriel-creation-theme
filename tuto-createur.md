@@ -38,11 +38,10 @@ Les pré-requis pour pouvoir le faire sont :
 - connaître les tags (clé / valeur) dans l'ontologie OpenStreetMap,
 - connaître une requête OverPass,
 
-Pour ce tutoriel, l'instance utilisée est https://mapcontrib.xyz.
-
 ## Se rendre sur l'instance
 
-Pour ce tutoriel, l'instance utilisée est https://mapcontrib.xyz.
+- Pour ce tutoriel, l'instance utilisée est https://mapcontrib.xyz.
+
 ![Page d'accueil](images/MapContrib_057.png)
 
 ## Se connecter avec son compte OpenStreetMap
@@ -90,19 +89,21 @@ Pour ce tutoriel, l'instance utilisée est https://mapcontrib.xyz.
 Un thème porte un titre, peut s'ouvrir sur un territoire particulier et possède quelques options générales décrites ci-dessous. Toutes ses options sont modifiables par la suite.
 
 ### Se géolocaliser
+
 ![Nouveau thème](images/MapContrib_023.png)
 
 - le raccourci clavier Ctrl+f fonctionne
 
 ![Recherche Gap](images/MapContrib_024.png)
 
-### Configuration générale
-
-#### Nom du thème, description et couleurs
+### Configuration
 
 ![Configuration](images/MapContrib_017.png)
 
 ![Configuration générale](images/MapContrib_018.png)
+
+#### Nom du thème, description et couleurs
+
 
 ![Colonne configuration générale - partie 1](images/MapContrib_019.png)
 - Nom du thème / apparaît à la fois dans l'url et en haut du thème
@@ -158,10 +159,10 @@ Un thème porte un titre, peut s'ouvrir sur un territoire particulier et possèd
 
 ![Création couches - Partie 4](images/MapContrib_028.png)
 
-- Nom / définit le nom de cette couche, telle que cela apparaît pour les contributeurs,
-- Description / permet de mieux renseigner le contenu de la couche, supporte également le markdown !
+- **Nom** / définit le nom de cette couche, telle que cela apparaît pour les contributeurs,
+- **Description** / permet de mieux renseigner le contenu de la couche, supporte également le markdown !
 	- ![Création couches - Partie 4](images/MapContrib_067.png)
-- Visibilité / va permettre au créateur de thème de préparer de nouvelles couches mais de ne pas les montrer aux contributeurs sur le thème,
+- **Visibilité** / va permettre au créateur de thème de préparer de nouvelles couches mais de ne pas les montrer aux contributeurs sur le thème,
 
 ### Représentation, Marqueur et Contenu des bulles
 
@@ -199,11 +200,11 @@ Pour appeler une valeur dynamique, on utilisera la clé entre accolade : {clé} 
 #### Zoom minimum, Requête OverPass et Cache
 ![Couche overpass - Partie 1](images/MapContrib_075.png)
 
-- Zoom minimum / définit la valeur à laquelle la requête overpass se déclenche,
-- Requête OverPass / Zone pour l'exécution de la requête
+- **Zoom minimum** / définit la valeur à laquelle la requête overpass se déclenche,
+- **Requête OverPass** / Zone pour l'exécution de la requête
 	- le temps de requête maximum (timeout) est limité à 120 secondes,
 	- la taille maximale de données rapatriés est limitée à 1 Mo !
-- Le cache !
+- **Le cache**
 	- activer le cache présente des avantages et des inconvénients
 		- les données se chargent plus rapidement (la requête overpass n'est pas exécuté, les données sont téléchargées depuis leur stockage en cache sur nos serveurs) mais se mettent à jour moins régulièrement (la requête est relancée une fois par jour pour mise à jour),
 		- sur un thème dont le cache est activé, une étoile jaune signale l'ajout d'une donnée depuis ce thème (et seulement depuis ce thème),
@@ -218,17 +219,8 @@ Selon le zoom minimum défini, la requête peut ne pas se déclencher à l'ouver
 
 ![Tester sa requête overpass - Partie 1](images/MapContrib_053.png)
 
-
-
-
-#### Quelques bonnes pratiques
-
-- pas trop de requètes
-- TIPS : durée max et taille de fichier max !
-
-
 ### Cas des autres formats de fichiers pour les couches
-Nom, Description, Visibilité, Représentation (groupable ou thermique), Marqueur et Contenu des bulles fonctionnent de la même manière. Seule la manière de voir des données diffèrent, par l'import d'un fichier depuis son ordinateur. Ces données ne seront ni modifiables, ni déplaçables et n'ont pas d'interactions avec la base de données OpenStreetMap.
+**Nom, Description, Visibilité, Représentation (groupable ou thermique), Marqueur et Contenu des bulles** fonctionnent de la même manière. Seule la manière de voir des données diffèrent, par l'import d'un fichier depuis son ordinateur. Ces données ne seront ni modifiables, ni déplaçables et n'ont pas d'interactions avec la base de données OpenStreetMap.
 Ces sources de données peuvent servir de comparaison, vérification de complétude par rapport à une autre source, ...
 
 #### CSV
@@ -242,28 +234,61 @@ Ces sources de données peuvent servir de comparaison, vérification de complét
 
 ## Configurer ses tags
 
-La configuration des tags va permettre ensuite de les utiliser traduit dans les "modèles" de points mais également dans les pop-ups de manière dynamique. Cela permet ainsi d'avoir une interface sans aucun mot étranger (souvent un frein pour les contributeurs ni geek ni cartographe ni contributeur).
+La configuration des tags va permettre par la suite de les utiliser :
+- pour la traduction des types de noeuds ("modèles" / "presets") : voir paragraphe suivant)
+- pour l'appel dynamique dans les bulles ("pop-ups") et donc pour la traduction dans les données dynamiques : cela permet ainsi d'avoir une interface sans aucun mot étranger (souvent un frein pour les contributeurs ni geek ni cartographe ni contributeur).
+
+Vous pouvez créer autant de tags que nécessaire, cependant il faut garder le lien avec la requête overpass... Bien "penser" ce que l'on veut voir, améliorer, ajouter avant de se lancer dans la requête, les tags, les modèles, la traduction !
 
 ![Définir les tags - Partie 1](images/MapContrib_032.png)
 
 ![Définir les tags - Partie 2](images/MapContrib_033.png)
+
 ![Définir les tags - Partie 3](images/MapContrib_034.png)
 
+- **Type** / permet de définir différents formats que l'on retrouvera ensuite dans les **Types de noeuds** et différentes présentations !
+	- Cases à cocher
+![Définir les tags - Cases à cocher](images/MapContrib_076.png)
+	- liste déroulante avec traduction
+![Définir les tags - Liste déroulante](images/MapContrib_077.png)
+
 ![Définir les tags - Partie 4](images/MapContrib_035.png)
+
 ![Définir les tags - Partie 5](images/MapContrib_036.png)
+
 ![Définir les tags - Partie 6](images/MapContrib_037.png)
 
+
 ## Définir les types de noeuds, "modèles"
+Les types de noeuds permettent de définir à la fois :
+- les tags pré-remplis qui pourront être utilisés pour compléter, qualifier des données existantes (fusion des tags entre le noeud existant et le type de noeud),
+- les tags pré-remplis qui pourront être ajoutés lorsque un noeud est manquant,
+
 ![Définir les types de noeuds - Partie 1](images/MapContrib_038.png)
+
 ![Définir les types de noeuds - Partie 2](images/MapContrib_039.png)
+
 ![Définir les types de noeuds - Partie 3](images/MapContrib_040.png)
+
 ![Définir les types de noeuds - Partie 4](images/MapContrib_041.png)
+
 ![Définir les types de noeuds - Partie 5](images/MapContrib_042.png)
+
+Cela se traduit donc pour le contributeur en un noeud "pré-rempli" :
+
+![Ajouter un noeud - Partie 1](images/MapContrib_081.png)
+
+![Ajouter un noeud - Partie 2](images/MapContrib_078.png)
+![Ajouter un noeud - Partie 3](images/MapContrib_079.png)
+![Ajouter un noeud - Partie 3](images/MapContrib_080.png)
+
 
 ## Traduire son thème
 
-Après avoir rempli l'ensemble des informations (chaînes de caractères par défaut, dans la langue de son choix), il est également possible de traduire les thèmes pour qu'il soit adapté en fonction de la langue du navigateur.
-L'absence de traduction d'une langue entraîne l'utilisation des chaînes de caractères par défaut.
+Après avoir rempli l'ensemble des informations il est possible de traduire les thèmes pour qu'il soit adapté en fonction de la langue du navigateur.
+L'absence de traduction d'une langue entraîne l'utilisation des chaînes de caractères par défaut (donc par défaut remplir les champs comme indiqué ci-dessus, puis traduire seulement les éléments nécessaires / souvent **tags** !).
+Si vous avez écrit en français sauf les tags, il n'est pas nécessaire de remplir les éléments de traduction concernant la configuration générale, les couches ou les types de noeuds. En l'absence de traductions, ceux sont les contenus écrit initiaux qui sont affichés.
+Ces traductions seront nécessaires pour que cela fonctionne dans d'autres langues.
 
 ![Traduction - Partie 1](images/MapContrib_043.png)
 ![Traduction - Partie 2](images/MapContrib_044.png)
