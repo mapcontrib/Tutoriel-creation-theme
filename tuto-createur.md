@@ -26,17 +26,18 @@
 <!-- /TOC -->
 
 # Tuto créateur de thèmes
-À L'instar d'[OpenBeerMap](http://openbeermap.github.io), d'[OsmHydrant](http://osmhydrant.org/) et de [wheelmap](https://wheelmap.org), MapContrib vise à faciliter la contribution à OpenStreetMap, par la création de thèmes en fonction des TOC (Troubles Obsessionnelles Cartographiques) propres à chacun.
+À l'instar d'[OpenBeerMap](http://openbeermap.github.io), d'[OsmHydrant](http://osmhydrant.org/) et de [wheelmap](https://wheelmap.org), MapContrib vise à faciliter la contribution à OpenStreetMap, par la création de thèmes en fonction des TOC (Troubles Obsessionnels Cartographiques) propre à chacun.
 Ces thèmes se basent sur :
 - une requête overpass (technique pour aller interroger une copie synchronisée de la base de donnée OpenStreetMap),
 - la définition de "types de noeuds",
 
 Ce tutoriel vise à accompagner la création d'un thème.
 Les pré-requis pour pouvoir le faire sont :
+
 - l'envie et/ou le besoin,
-- un compte OpenStreetMap,
-- connaître les tags (clé / valeur) dans l'ontologie OpenStreetMap,
-- connaître une requête OverPass,
+- [un compte OpenStreetMap](https://www.openstreetmap.org/user/new),
+- connaître les tags (clé / valeur) dans [l'ontologie OpenStreetMap](https://wiki.openstreetmap.org/wiki/FR:Page_principale),
+- connaître une requête [OverPass](http://overpass-turbo.eu/),
 
 ## Se rendre sur l'instance
 
@@ -45,29 +46,29 @@ Les pré-requis pour pouvoir le faire sont :
 ![Page d'accueil](images/MapContrib_057.png)
 
 ## Se connecter avec son compte OpenStreetMap
-- Se rendre dans la colonne de paramètres
+- Se rendre dans la colonne de paramètres,
 
 ![Page d'accueil](images/MapContrib_008.png)
 
-- Se connecter
+- Se connecter,
 
 ![Colonne](images/MapContrib_009.png)
 
-- en utilisant son compte OpenStreetMap
+- en utilisant son compte OpenStreetMap,
 
 ![Pop-up OpenStreetMap](images/MapContrib_010.png)
 
-- Renseigner ses identifiants OpenStreetMap
+- Renseigner ses identifiants OpenStreetMap,
 
 ![Page de connexion OpenStreetMap](images/MapContrib_013.png)
 
-- Accepter que MapContrib accède à votre compte OpenStreetMap
+- Accepter que MapContrib accède à votre compte OpenStreetMap,
 
 ![Autoriser accès MapContrib](images/MapContrib_014.png)
 
 ## Créer un nouveau thème
 
-- Se rendre dans la colonne de paramètres
+- Se rendre dans la colonne de paramètres,
 
 ![Page d'accueil connectée](images/MapContrib_015.png)
 
@@ -75,8 +76,8 @@ Les pré-requis pour pouvoir le faire sont :
 
 À noter :
 
-- la possibilité de retrouver tous les thèmes que l'on a créé
-- la possibilité de retrouver ses favoris (des thèmes que l'on a créé ou pas, dont on souhaite garder la trace)
+- la possibilité de retrouver tous les thèmes que l'on a créé,
+- la possibilité de retrouver ses favoris (des thèmes que l'on a créé ou pas, dont on souhaite garder la trace),
 
 ![Favoris 1](images/MapContrib_059.png)
 
@@ -106,6 +107,7 @@ Un thème porte un titre, peut s'ouvrir sur un territoire particulier et possèd
 
 
 ![Colonne configuration générale - partie 1](images/MapContrib_019.png)
+
 - Nom du thème / apparaît à la fois dans l'url et en haut du thème
   - si vous changez le titre, même une ancienne url fonctionne car le titre n'est pas pris en compte, seul le code (unique) sert à trouver le thème,
   - pas d'inquiétudes donc vous pouvez changer le nom de votre thème quand vous voulez :)
@@ -121,8 +123,8 @@ Un thème porte un titre, peut s'ouvrir sur un territoire particulier et possèd
 
 ![Colonne configuration générale - partie 2](images/MapContrib_020.png)
 
-- Positionnement / Enregistrer les paramètres actuels / permet de garder la géolocalisation sur Gap ainsi que le niveau de zoom. Ainsi, lorsqu'une personne arrive sur le thème elle est centrée selon des paramètres définis par le créateur du thème,
-- Géolocalisation / permet de passer outre les paramètres ci-dessus et de géolocaliser automatiquement toute personne arrivant sur le thème.
+- Positionnement / Enregistrer les paramètres actuels / permet de conserver la géolocalisation et le niveau de zoom pour une personne arrivant sur le thème,
+- Géolocalisation / va demander l'autorisation de se géolocaliser à toute personne arrivant sur le thème,
 
 #### Géocodeur, Affichage des informations et Statistiques
 
@@ -131,17 +133,29 @@ Un thème porte un titre, peut s'ouvrir sur un territoire particulier et possèd
 - Géocodeur / permet de définir le géocodeur utilisé lors des recherche (Ctrl+F). Par défaut, Photon est utilisé pour des raisons de fluidité.
 - Affichage des informations / les informations des POI peuvent être affichés dans plusieurs types de fenêtres. Par défaut en colonne à droite, il est aussi possible de changer le comportement du thème en affichant :
   - des Infobulles ![infobulle](images/MapContrib_064.png),
-  - des Fenêtres modales![infobulle](images/MapContrib_065.png),
+  - des Fenêtres modales![Modales](images/MapContrib_065.png),
 
 ### Fonds de carte
 
-![Fonds de carte - partie 1](images/MapContrib_055.png)
+- ![Fonds de carte - partie 1](images/MapContrib_055.png)
 
-![Fonds de carte - partie 2](images/MapContrib_056.png)
+- ![Fonds de carte - partie 2](images/MapContrib_056.png)
 
-- Définition des fonds de cartes pour les contributeurs. Ces derniers auront la possibilité d'en choisir d'autres mais ceux définit par le créateur du thème sont mis en avant.
+	- Définition des fonds de cartes pour les contributeurs. Ces derniers auront la possibilité d'en choisir d'autres mais ceux définis par le créateur du thème sont mis en avant.
 
 ## Créer une couche de données
+
+Plusieurs couches de données peuvent être créées. Cependant, quelques précautions avant de créer une dizaine de couches différentes:
+- dans les cas des couches "overpass" : **trop de couches simultanées renvoient des erreurs, les serveurs overpass n'appréciant pas d'avoir trop de requêtes provenant d'une même adresse "IP"**,
+- dans les cas d'autres types de couches : **trop de données peuvent aussi saturer l'explorateur internet, c'est coté client que se passe les calculs !**
+
+Donc 4 types de données peuvent être ajoutés :
+ - des données provenant directement d'OpenStreetMap à travers une requête overpass (c'est le coeur de MapContrib),
+
+Mais aussi pour permettre de faire des comparaisons avec les données OSM :
+ - des données dans un fichier csv comportant des titres de colonnes longitude et latitude,
+ - par un fichier GeoJSON,
+ - par un fichier GPX,
 
 ![Création couches - Partie 1](images/MapContrib_025.png)
 
@@ -149,11 +163,7 @@ Un thème porte un titre, peut s'ouvrir sur un territoire particulier et possèd
 
 ![Création couches - Partie 3](images/MapContrib_027.png)
 
- - 4 types de données peuvent être ajoutés
- 	- des données provenant directement d'OpenStreetMap à travers une requête overpass,
-	- des données dans un fichier csv comportant des titres de colonnes longitude et latitude,
-	- par un fichier GeoJSON,
-	- par un fichier GPX,
+
 
 ### Nom, Description et Visibilité
 
