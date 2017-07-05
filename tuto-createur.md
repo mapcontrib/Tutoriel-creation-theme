@@ -25,6 +25,8 @@
 
 <!-- /TOC -->
 
+-----
+
 # Tuto créateur de thèmes
 À l'instar d'[OpenBeerMap](http://openbeermap.github.io), d'[OsmHydrant](http://osmhydrant.org/) et de [wheelmap](https://wheelmap.org), MapContrib vise à faciliter la contribution à OpenStreetMap, par la création de thèmes en fonction des TOC (Troubles Obsessionnels Cartographiques) propre à chacun.
 Ces thèmes se basent sur :
@@ -47,31 +49,20 @@ Les pré-requis pour pouvoir le faire sont :
 
 ## Se connecter avec son compte OpenStreetMap
 - Se rendre dans la colonne de paramètres,
-
-![Page d'accueil](images/MapContrib_008.png)
-
-- Se connecter,
-
-![Colonne](images/MapContrib_009.png)
-
-- en utilisant son compte OpenStreetMap,
-
-![Pop-up OpenStreetMap](images/MapContrib_010.png)
-
-- Renseigner ses identifiants OpenStreetMap,
-
-![Page de connexion OpenStreetMap](images/MapContrib_013.png)
-
+- Se connecter en utilisant son compte OpenStreetMap,
 - Accepter que MapContrib accède à votre compte OpenStreetMap,
 
+### En images
+![Page d'accueil](images/MapContrib_008.png)
+![Colonne](images/MapContrib_009.png)
+![Pop-up OpenStreetMap](images/MapContrib_010.png)
+![Page de connexion OpenStreetMap](images/MapContrib_013.png)
 ![Autoriser accès MapContrib](images/MapContrib_014.png)
 
 ## Créer un nouveau thème
-
 - Se rendre dans la colonne de paramètres,
 
 ![Page d'accueil connectée](images/MapContrib_015.png)
-
 ![Colonne connectée](images/MapContrib_016.png)
 
 À noter :
@@ -80,38 +71,32 @@ Les pré-requis pour pouvoir le faire sont :
 - la possibilité de retrouver ses favoris (des thèmes que l'on a créé ou pas, dont on souhaite garder la trace),
 
 ![Favoris 1](images/MapContrib_059.png)
-
 ![Favoris 1](images/MapContrib_060.png)
-
 ![Favoris 1](images/MapContrib_058.png)
 
 ## Configurer le thème
 
 Un thème porte un titre, peut s'ouvrir sur un territoire particulier et possède quelques options générales décrites ci-dessous. Toutes ses options sont modifiables par la suite.
 
-### Se géolocaliser
+### Trouver un lieu
 
-![Nouveau thème](images/MapContrib_023.png)
+- la `loupe` ou au clavier `Ctrl+f`
 
-- le raccourci clavier Ctrl+f fonctionne
-
-![Recherche Gap](images/MapContrib_024.png)
+![Rechercher un lieu](images/MapContrib_024.png)
 
 ### Configuration
 
 ![Configuration](images/MapContrib_017.png)
-
 ![Configuration générale](images/MapContrib_018.png)
 
 #### Nom du thème, description et couleurs
 
-
 ![Colonne configuration générale - partie 1](images/MapContrib_019.png)
 
-- Nom du thème / apparaît à la fois dans l'url et en haut du thème
+- `Nom du thème` / apparaît à la fois dans l'url et en haut du thème
   - si vous changez le titre, même une ancienne url fonctionne car le titre n'est pas pris en compte, seul le code (unique) sert à trouver le thème,
   - pas d'inquiétudes donc vous pouvez changer le nom de votre thème quand vous voulez :)
-- Description / permet de décrire le sujet de votre thème. Lorsque ce champ est rempli, un i apparaît à coté du nom du thème et permet d'accéder à la description.
+- `Description` / permet de décrire le sujet de votre thème. Lorsque ce champ est rempli, un i apparaît à coté du nom du thème et permet d'accéder à la description.
 
 ![Colonne configuration générale - partie 1-1](images/MapContrib_061.png)
 
@@ -123,25 +108,28 @@ Un thème porte un titre, peut s'ouvrir sur un territoire particulier et possèd
 
 ![Colonne configuration générale - partie 2](images/MapContrib_020.png)
 
-- Positionnement / Enregistrer les paramètres actuels / permet de conserver la géolocalisation et le niveau de zoom pour une personne arrivant sur le thème,
-- Géolocalisation / va demander l'autorisation de se géolocaliser à toute personne arrivant sur le thème,
+- `Positionnement` / Enregistrer les paramètres actuels / permet de conserver la géolocalisation et le niveau de zoom pour une personne arrivant sur le thème,
+- `Géolocalisation` / va demander l'autorisation de se géolocaliser à toute personne arrivant sur le thème,
 
 #### Géocodeur, Affichage des informations et Statistiques
 
 ![Colonne configuration générale - partie 3](images/MapContrib_021.png)
 
-- Géocodeur / permet de définir le géocodeur utilisé lors des recherche (Ctrl+F). Par défaut, Photon est utilisé pour des raisons de fluidité.
-- Affichage des informations / les informations des POI peuvent être affichés dans plusieurs types de fenêtres. Par défaut en colonne à droite, il est aussi possible de changer le comportement du thème en affichant :
-  - des Infobulles ![infobulle](images/MapContrib_064.png),
-  - des Fenêtres modales![Modales](images/MapContrib_065.png),
+- `Géocodeur` / permet de définir le géocodeur utilisé lors des recherche (`Ctrl+f`). Par défaut, Photon est utilisé pour des raisons de fluidité.
+- `Affichage des informations` / les informations des POI peuvent être affichées dans plusieurs types de fenêtres. Par défaut en colonne à droite, il est aussi possible de changer le comportement du thème en affichant :
+  - des `Infobulles` / des `fenêtres modales`
+
+![infobulle](images/MapContrib_064.png)
+![Modales](images/MapContrib_065.png)
 
 ### Fonds de carte
 
-- ![Fonds de carte - partie 1](images/MapContrib_055.png)
+Cela permet de définir les fonds de cartes mis en avant par le créateur du thème. Les contributeurs auront cependant la possibilité d'en choisir d'autres, ceux définis par le créateur du thème sont simplement mis en avant.
 
-- ![Fonds de carte - partie 2](images/MapContrib_056.png)
+![Fonds de carte - partie 1](images/MapContrib_055.png)
+![Fonds de carte - partie 2](images/MapContrib_056.png)
 
-	- Définition des fonds de cartes pour les contributeurs. Ces derniers auront la possibilité d'en choisir d'autres mais ceux définis par le créateur du thème sont mis en avant.
+
 
 ## Créer une couche de données
 
@@ -158,88 +146,88 @@ Mais aussi pour permettre de faire des comparaisons avec les données OSM :
  - par un fichier GPX,
 
 ![Création couches - Partie 1](images/MapContrib_025.png)
-
 ![Création couches - Partie 2](images/MapContrib_026.png)
-
 ![Création couches - Partie 3](images/MapContrib_027.png)
 
 
 
 ### Nom, Description et Visibilité
 
+- `Nom` / définit le nom de cette couche, telle que cela apparaît pour les contributeurs,
+- `Description` / permet de mieux renseigner le contenu de la couche -> supporte le markdown !
+	- exemple ci-dessous de l'insertion d'une image,
+- `Visibilité` / va permettre au créateur de thème de préparer de nouvelles couches mais de ne pas les montrer aux contributeurs sur le thème,
+
 ![Création couches - Partie 4](images/MapContrib_028.png)
+![Création couches - Partie 4](images/MapContrib_067.png)
 
-- **Nom** / définit le nom de cette couche, telle que cela apparaît pour les contributeurs,
-- **Description** / permet de mieux renseigner le contenu de la couche, supporte également le markdown !
-	- ![Création couches - Partie 4](images/MapContrib_067.png)
-- **Visibilité** / va permettre au créateur de thème de préparer de nouvelles couches mais de ne pas les montrer aux contributeurs sur le thème,
 
-### Représentation, Marqueur et Contenu des bulles
+
+### Représentation
 
 ![Création couches - Partie 4](images/MapContrib_029.png)
 
-#### Représentation
+Dans l'édition de la couche, la possibilité de personnaliser la `Représentation` sous forme de `Points groupables` ("clustering" par défaut) ou de `Carte thermique` (avec quelques options disponibles).
 
-Sous forme de points groupables (par défaut) ou de carte thermique.
-- ![Carte thermique](images/MapContrib_068.png)
+![Carte cluster](images/MapContrib_082.png)
+![Carte thermique](images/MapContrib_068.png)
+![Carte thermique, options](images/MapContrib_069.png)
 
-- Options ![Carte thermique, options](images/MapContrib_069.png)
+### Marqueur
 
-#### Marqueur
-Les marqueurs de chaque couche sont personnalisables :
-- au niveau de la couleur et de la forme
-	- ![Couleurs et formes marqueurs](images/MapContrib_070.png)
+![Création couches - Partie 4](images/MapContrib_029.png)
 
-- avec une bibliothèque d'icônes :
-	- ![Bibliothèques d'icônes](images/MapContrib_071.png)
+Les `marqueurs` de chaque couche sont personnalisables :
+- au niveau de la couleur et de la forme,
+- avec une bibliothèque d'icônes,
+- avec un lien vers une image extérieure (assurez vous d'avoir les droits d'utilisation de l'image),
 
-- ou un lien vers une image extérieure (assurez vous d'avoir les droits d'utilisation de l'image) :
-	- ![Lien icône externe](images/MapContrib_072.png)
+![Couleurs et formes marqueurs](images/MapContrib_070.png)
+![Bibliothèques d'icônes](images/MapContrib_071.png)
+![Lien icône externe](images/MapContrib_072.png)
 
-#### Contenu des bulles
-Les données de la couche, quelque soit la source, peuvent être affichés de manière dynamique dans la "bulle" associée à chaque point.
+### Contenu des bulles
+Pour chaque couche, les informations associées peuvent être personnalisées. Pour cela, il faut définir le `Contenu des bulles` (le markdown est supporté).
 
-Pour cela, il est important de définir le contenu des bulles.
+De plus, quelque soit la source (overpass, csv, GeoJSON, GPX), les données peuvent être affichées de manière dynamique, en utilisant une clé entre accolade : {clé}.
 
-Pour appeler une valeur dynamique, on utilisera la clé entre accolade : {clé} renvoie la valeur de manière dynamique.
+La clé peut-être "l'en-tête" de colonne du fichier csv ou la clé du couple clé/valeur de l'ontologie OpenStreetMap.
 
-- ![Contenu de la bulle](images/MapContrib_073.png)
-- ![Résultat dynamique](images/MapContrib_074.png)
+![Contenu de la bulle](images/MapContrib_073.png)
+![Résultat dynamique](images/MapContrib_074.png)
 
-### Cas de la requête overpass
+### Couche requête overpass
+
+Dans le cas d'une couche de type overpass, plusieurs autres personnalisations sont possibles.
+
 #### Zoom minimum, Requête OverPass et Cache
+
 ![Couche overpass - Partie 1](images/MapContrib_075.png)
 
-- **Zoom minimum** / définit la valeur à laquelle la requête overpass se déclenche,
-- **Requête OverPass** / Zone pour l'exécution de la requête
+- `Zoom minimum` / définit la valeur à laquelle la requête overpass se déclenche,
+- `Requête OverPass` / Zone pour l'exécution de la requête
 	- le temps de requête maximum (timeout) est limité à 120 secondes,
 	- la taille maximale de données rapatriés est limitée à 1 Mo !
-- **Le cache**
+- `Le cache`
 	- activer le cache présente des avantages et des inconvénients
-		- les données se chargent plus rapidement (la requête overpass n'est pas exécuté, les données sont téléchargées depuis leur stockage en cache sur nos serveurs) mais se mettent à jour moins régulièrement (la requête est relancée une fois par jour pour mise à jour),
-		- sur un thème dont le cache est activé, une étoile jaune signale l'ajout d'une donnée depuis ce thème (et seulement depuis ce thème),
+		- les données se chargent plus rapidement (la requête overpass n'est pas exécutée, les données sont téléchargées depuis leur stockage en cache sur nos serveurs) mais se mettent à jour moins régulièrement (la requête est relancée une fois par jour pour mise à jour),
+		- sur un thème dont le cache est activé, une étoile jaune signale l'ajout d'une donnée depuis le thème aux autres utilisateurs du thème,
 
 
 ### Tester sa requête
 Selon le zoom minimum défini, la requête peut ne pas se déclencher à l'ouverture du thème. Il faudra alors zoomer pour permettre le déclenchement.
 
 ![Tester sa requête overpass - Partie 1](images/MapContrib_051.png)
-
 ![Tester sa requête overpass - Partie 1](images/MapContrib_052.png)
-
 ![Tester sa requête overpass - Partie 1](images/MapContrib_053.png)
 
 ### Cas des autres formats de fichiers pour les couches
 **Nom, Description, Visibilité, Représentation (groupable ou thermique), Marqueur et Contenu des bulles** fonctionnent de la même manière. Seule la manière de voir des données diffèrent, par l'import d'un fichier depuis son ordinateur. Ces données ne seront ni modifiables, ni déplaçables et n'ont pas d'interactions avec la base de données OpenStreetMap.
 Ces sources de données peuvent servir de comparaison, vérification de complétude par rapport à une autre source, ...
 
-#### CSV
+#### CSV, GeoJSON, GPX
 ![Fichier CSV - Partie 1](images/MapContrib_005.png)
-
-#### GeoJSON
 ![Fichier GeoJSON - Partie 1](images/MapContrib_006.png)
-
-#### GPX
 ![Fichier GPX - Partie 1](images/MapContrib_007.png)
 
 ## Configurer ses tags
@@ -251,21 +239,18 @@ La configuration des tags va permettre par la suite de les utiliser :
 Vous pouvez créer autant de tags que nécessaire, cependant il faut garder le lien avec la requête overpass... Bien "penser" ce que l'on veut voir, améliorer, ajouter avant de se lancer dans la requête, les tags, les modèles, la traduction !
 
 ![Définir les tags - Partie 1](images/MapContrib_032.png)
-
 ![Définir les tags - Partie 2](images/MapContrib_033.png)
-
 ![Définir les tags - Partie 3](images/MapContrib_034.png)
 
-- **Type** / permet de définir différents formats que l'on retrouvera ensuite dans les **Types de noeuds** et différentes présentations !
+- `Type` / permet de définir différents formats que l'on retrouvera ensuite dans les **Types de noeuds** et différentes présentations !
+
 	- Cases à cocher
-![Définir les tags - Cases à cocher](images/MapContrib_076.png)
 	- liste déroulante avec traduction
+
+![Définir les tags - Cases à cocher](images/MapContrib_076.png)
 ![Définir les tags - Liste déroulante](images/MapContrib_077.png)
-
 ![Définir les tags - Partie 4](images/MapContrib_035.png)
-
 ![Définir les tags - Partie 5](images/MapContrib_036.png)
-
 ![Définir les tags - Partie 6](images/MapContrib_037.png)
 
 
@@ -275,23 +260,16 @@ Les types de noeuds permettent de définir à la fois :
 - les tags pré-remplis qui pourront être ajoutés lorsque un noeud est manquant,
 
 ![Définir les types de noeuds - Partie 1](images/MapContrib_038.png)
-
 ![Définir les types de noeuds - Partie 2](images/MapContrib_039.png)
-
 ![Définir les types de noeuds - Partie 3](images/MapContrib_040.png)
-
 ![Définir les types de noeuds - Partie 4](images/MapContrib_041.png)
-
 ![Définir les types de noeuds - Partie 5](images/MapContrib_042.png)
 
 Cela se traduit donc pour le contributeur en un noeud "pré-rempli" :
 
 ![Ajouter un noeud - Partie 1](images/MapContrib_081.png)
-
 ![Ajouter un noeud - Partie 2](images/MapContrib_078.png)
-
 ![Ajouter un noeud - Partie 3](images/MapContrib_079.png)
-
 ![Ajouter un noeud - Partie 3](images/MapContrib_080.png)
 
 
@@ -303,13 +281,8 @@ Si vous avez écrit en français sauf les tags, il n'est pas nécessaire de remp
 Ces traductions seront nécessaires pour que cela fonctionne dans d'autres langues.
 
 ![Traduction - Partie 1](images/MapContrib_043.png)
-
 ![Traduction - Partie 2](images/MapContrib_044.png)
-
 ![Traduction - Partie 3](images/MapContrib_045.png)
-
 ![Traduction - Partie 4](images/MapContrib_046.png)
-
 ![Traduction - Partie 5](images/MapContrib_047.png)
-
 ![Traduction - Partie 5](images/MapContrib_049.png)
