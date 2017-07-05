@@ -1,33 +1,7 @@
-<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+![](images/MapContrib.png)
 
-- [Tuto créateur de thèmes](#tuto-crateur-de-thmes)
-	- [Se rendre sur l'instance](#se-rendre-sur-linstance)
-	- [Se connecter avec son compte OpenStreetMap](#se-connecter-avec-son-compte-openstreetmap)
-	- [Créer un nouveau thème](#crer-un-nouveau-thme)
-	- [Configurer le thème](#configurer-le-thme)
-		- [Se géolocaliser](#se-golocaliser)
-		- [Configuration générale](#configuration-gnrale)
-			- [Nom du thème, description et couleurs](#nom-du-thme-description-et-couleurs)
-			- [Positionnement et géolocalisation](#positionnement-et-golocalisation)
-			- [Géocodeur, Affichage des informations et Statistiques](#gocodeur-affichage-des-informations-et-statistiques)
-		- [Fonds de carte](#fonds-de-carte)
-	- [Créer une couche de données](#crer-une-couche-de-donnes)
-		- [Cas de la requête overpass](#cas-de-la-requte-overpass)
-		- [Tester sa requête](#tester-sa-requte)
-			- [Le cache !](#le-cache-)
-			- [Quelques bonnes pratiques](#quelques-bonnes-pratiques)
-		- [Cas du fichier CSV](#cas-du-fichier-csv)
-		- [Cas du fichier GeoJSON](#cas-du-fichier-geojson)
-		- [Cas du fichier GPX](#cas-du-fichier-gpx)
-	- [Configurer ses tags](#configurer-ses-tags)
-	- [Définir les types de noeuds, "modèles"](#dfinir-les-types-de-noeuds-modles)
-	- [Traduire son thème](#traduire-son-thme)
+# Tutoriel / Créer un thème MapContrib
 
-<!-- /TOC -->
-
------
-
-# Tuto créateur de thèmes
 À l'instar d'[OpenBeerMap](http://openbeermap.github.io), d'[OsmHydrant](http://osmhydrant.org/) et de [wheelmap](https://wheelmap.org), MapContrib vise à faciliter la contribution à OpenStreetMap, par la création de thèmes en fonction des TOC (Troubles Obsessionnels Cartographiques) propre à chacun.
 Ces thèmes se basent sur :
 - une requête overpass (technique pour aller interroger une copie synchronisée de la base de donnée OpenStreetMap),
@@ -41,6 +15,15 @@ Les pré-requis pour pouvoir le faire sont :
 - connaître les tags (clé / valeur) dans [l'ontologie OpenStreetMap](https://wiki.openstreetmap.org/wiki/FR:Page_principale),
 - connaître une requête [OverPass](http://overpass-turbo.eu/),
 
+Quelques conseils !!!
+
+- `Bien "penser" à ce que l'on veut voir, améliorer, ajouter avant de se lancer dans la requête, les tags, les modèles, la traduction !`,
+- `Connaître les tags OpenStreetMap et avoir un peu regardé les différents cas sur le wiki`,
+- `Commencer par un thème simple et une requête facile`
+
+
+
+
 ## Se rendre sur l'instance
 
 - Pour ce tutoriel, l'instance utilisée est https://mapcontrib.xyz.
@@ -53,6 +36,7 @@ Les pré-requis pour pouvoir le faire sont :
 - Accepter que MapContrib accède à votre compte OpenStreetMap,
 
 ### En images
+
 ![Page d'accueil](images/MapContrib_008.png)
 ![Colonne](images/MapContrib_009.png)
 ![Pop-up OpenStreetMap](images/MapContrib_010.png)
@@ -221,11 +205,18 @@ Selon le zoom minimum défini, la requête peut ne pas se déclencher à l'ouver
 ![Tester sa requête overpass - Partie 1](images/MapContrib_052.png)
 ![Tester sa requête overpass - Partie 1](images/MapContrib_053.png)
 
-### Cas des autres formats de fichiers pour les couches
-**Nom, Description, Visibilité, Représentation (groupable ou thermique), Marqueur et Contenu des bulles** fonctionnent de la même manière. Seule la manière de voir des données diffèrent, par l'import d'un fichier depuis son ordinateur. Ces données ne seront ni modifiables, ni déplaçables et n'ont pas d'interactions avec la base de données OpenStreetMap.
-Ces sources de données peuvent servir de comparaison, vérification de complétude par rapport à une autre source, ...
+### Cas des autres formats de fichiers (csv, GeoJSon, GPX))
+`Nom, Description, Visibilité, Représentation (groupable ou thermique), Marqueur et Contenu des bulles` fonctionnent de la même manière.
+Cependant les données importées ne seront ni modifiables, ni déplaçables et n'ont pas d'interactions avec la base de données OpenStreetMap.
+
+Ces données importées peuvent ainsi être comparées aux données OpenStreetMap.
 
 #### CSV, GeoJSON, GPX
+
+Quelques contraintes :
+- le poids des fichiers ne doit pas dépasser 2 MB,
+- dans le cas du fichier csv, les colonnes de localisation doivent être nommées latitude et longitude,
+
 ![Fichier CSV - Partie 1](images/MapContrib_005.png)
 ![Fichier GeoJSON - Partie 1](images/MapContrib_006.png)
 ![Fichier GPX - Partie 1](images/MapContrib_007.png)
@@ -236,7 +227,7 @@ La configuration des tags va permettre par la suite de les utiliser :
 - pour la traduction des types de noeuds ("modèles" / "presets") : voir paragraphe suivant)
 - pour l'appel dynamique dans les bulles ("pop-ups") et donc pour la traduction dans les données dynamiques : cela permet ainsi d'avoir une interface sans aucun mot étranger (souvent un frein pour les contributeurs ni geek ni cartographe ni contributeur).
 
-Vous pouvez créer autant de tags que nécessaire, cependant il faut garder le lien avec la requête overpass... Bien "penser" ce que l'on veut voir, améliorer, ajouter avant de se lancer dans la requête, les tags, les modèles, la traduction !
+Vous pouvez créer autant de tags que nécessaire, cependant n'oubliez pas de garder le lien avec la requête overpass... Bien "penser" ce que l'on veut voir, améliorer, ajouter avant de se lancer dans la requête, les tags, les modèles, la traduction !
 
 ![Définir les tags - Partie 1](images/MapContrib_032.png)
 ![Définir les tags - Partie 2](images/MapContrib_033.png)
@@ -255,6 +246,7 @@ Vous pouvez créer autant de tags que nécessaire, cependant il faut garder le l
 
 
 ## Définir les types de noeuds, "modèles"
+
 Les types de noeuds permettent de définir à la fois :
 - les tags pré-remplis qui pourront être utilisés pour compléter, qualifier des données existantes (fusion des tags entre le noeud existant et le type de noeud),
 - les tags pré-remplis qui pourront être ajoutés lorsque un noeud est manquant,
@@ -276,9 +268,12 @@ Cela se traduit donc pour le contributeur en un noeud "pré-rempli" :
 ## Traduire son thème
 
 Après avoir rempli l'ensemble des informations il est possible de traduire les thèmes pour qu'il soit adapté en fonction de la langue du navigateur.
-L'absence de traduction d'une langue entraîne l'utilisation des chaînes de caractères par défaut (donc par défaut remplir les champs comme indiqué ci-dessus, puis traduire seulement les éléments nécessaires / souvent **tags** !).
+
+L'absence de traduction d'une langue entraîne l'utilisation des chaînes de caractères par défaut. Par défaut remplir les champs comme indiqué ci-dessus, puis traduire seulement les éléments nécessaires / souvent **tags** !).
+
 Si vous avez écrit en français sauf les tags, il n'est pas nécessaire de remplir les éléments de traduction concernant la configuration générale, les couches ou les types de noeuds. En l'absence de traductions, ceux sont les contenus écrit initiaux qui sont affichés.
-Ces traductions seront nécessaires pour que cela fonctionne dans d'autres langues.
+
+Ces traductions seront cependant nécessaires pour que cela fonctionne dans d'autres langues.
 
 ![Traduction - Partie 1](images/MapContrib_043.png)
 ![Traduction - Partie 2](images/MapContrib_044.png)
@@ -286,3 +281,23 @@ Ces traductions seront nécessaires pour que cela fonctionne dans d'autres langu
 ![Traduction - Partie 4](images/MapContrib_046.png)
 ![Traduction - Partie 5](images/MapContrib_047.png)
 ![Traduction - Partie 5](images/MapContrib_049.png)
+
+## Quelques exemples de thèmes
+
+- n'oubliez pas que vous pouvez dupliquer un thème, en devenir "administrateur" et ainsi pouvoir le disséquer pour comprendre,
+
+![Dupliquer un thème - Partie 1](images/MapContrib_084.png)
+![Dupliquer un thème - Partie 1](images/MapContrib_085.png)
+![Dupliquer un thème - Partie 1](images/MapContrib_086.png)
+
+  - les bornes à incendies,
+  - les bornes de recyclages,
+  - ...
+
+## Quelques ressources complémentaires
+
+### La requête overpass-turbo
+
+### Écrire en markdown
+
+- https://fr.wikipedia.org/wiki/Markdown
