@@ -113,8 +113,6 @@ Cela permet de définir les fonds de cartes mis en avant par le créateur du th�
 ![Fonds de carte - partie 1](images/MapContrib_055.png)
 ![Fonds de carte - partie 2](images/MapContrib_056.png)
 
-
-
 ## Créer une couche de données
 
 Plusieurs couches de données peuvent être créées. Cependant, quelques précautions avant de créer une dizaine de couches différentes:
@@ -133,8 +131,6 @@ Mais aussi pour permettre de faire des comparaisons avec les données OSM :
 ![Création couches - Partie 2](images/MapContrib_026.png)
 ![Création couches - Partie 3](images/MapContrib_027.png)
 
-
-
 ### Nom, Description et Visibilité
 
 - `Nom` / définit le nom de cette couche, telle que cela apparaît pour les contributeurs,
@@ -145,8 +141,6 @@ Mais aussi pour permettre de faire des comparaisons avec les données OSM :
 ![Création couches - Partie 4](images/MapContrib_028.png)
 ![Création couches - Partie 4](images/MapContrib_067.png)
 
-
-
 ### Représentation
 
 ![Création couches - Partie 4](images/MapContrib_029.png)
@@ -156,6 +150,8 @@ Dans l'édition de la couche, la possibilité de personnaliser la `Représentati
 ![Carte cluster](images/MapContrib_082.png)
 ![Carte thermique](images/MapContrib_068.png)
 ![Carte thermique, options](images/MapContrib_069.png)
+
+- l'opacité minimum de la couche
 
 ### Marqueur
 
@@ -193,9 +189,11 @@ Dans le cas d'une couche de type overpass, plusieurs autres personnalisations so
 	- le temps de requête maximum (timeout) est limité à 120 secondes,
 	- la taille maximale de données rapatriés est limitée à 1 Mo !
 - `Le cache`
-	- activer le cache présente des avantages et des inconvénients
+	- `activer le cache` présente des avantages et des inconvénients
 		- les données se chargent plus rapidement (la requête overpass n'est pas exécutée, les données sont téléchargées depuis leur stockage en cache sur nos serveurs) mais se mettent à jour moins régulièrement (la requête est relancée une fois par jour pour mise à jour),
 		- sur un thème dont le cache est activé, une étoile jaune signale l'ajout d'une donnée depuis le thème aux autres utilisateurs du thème,
+  - `activer l'archivage du cache` permet de décider si les points supprimés dans OpenStreetMap sont retirés de l'affichage du cache qui est fait dans le thème de MapContrib
+    - cela concerne surtout une fonction d'affichage sur un site institutionnel, pour permettre à l'institution d'avoir un contrôle sur l'affichage sur son site (bien évidemment sans modération dans la base OpenStreetMap)
 
 
 ### Tester sa requête
@@ -298,6 +296,43 @@ Ces traductions seront cependant nécessaires pour que cela fonctionne dans d'au
 
 ### La requête overpass-turbo
 
+1. Définir le tag que l'on souhaite trouver
+1. Aller sur [l'assistant](http://overpass-turbo.eu/)
+
+  ![assistant overpass](/images/MapContrib_089.png)
+
+1. Renseigner son tag et construire la requête
+1. Tester sur de petites zones
+1. Lorsque la requête fonctionne, faire un copié-collé dans MapContrib
+
+![Couche overpass - Partie 1](images/MapContrib_075.png)
+
+Dans `Charger`, il y a plusieurs exemples qui permettent de construire la requête overpass.
+
+![Overpass, charger](/images/MapContrib_090.png)
+
+- pour plus d'infos :
+  - http://wiki.openstreetmap.org/wiki/FR:Overpass_turbo
+  - http://wiki.openstreetmap.org/wiki/FR:Overpass_API/Overpass_QL
+
 ### Écrire en markdown
 
 - https://fr.wikipedia.org/wiki/Markdown
+
+
+#### insérer une table en markdown
+
+- l'html est interprété, on peut donc insérer une table si on le souhaite. Cela peut aider pour mieux présenter différents champs descriptifs de MapContrib.
+
+Ici un tableau en html :
+
+![code html](images/MapContrib_088.png)
+
+Cela donne ceci :
+
+<table style="width:100%">
+    <tr>
+        <td width=30%> ![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Bike_racks_at_north-west_of_Westfield_-_geograph.org.uk_-_1041057.jpg/100px-Bike_racks_at_north-west_of_Westfield_-_geograph.org.uk_-_1041057.jpg)</td>
+          <td width=70%>*Arceaux à vélos classiques. L'appui du vélo (et son verrouillage) sur la barre en métal sont possibles*</td>
+  </tr>
+  </table>
